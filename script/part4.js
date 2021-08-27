@@ -60,7 +60,9 @@ const PART4_8 = `SELECT content.title, user.name
     TODO: Q 4-9. content의 데이터를 수정하기 위한 SQL을 작성해주세요.
         - title이 database sprint인 content 데이터에서 body를 database is very easy로 수정해야합니다.
 */
-const PART4_9 = `FILL IN THIS`;
+const PART4_9 = `UPDATE content 
+                SET body = 'database is very easy'
+                WHERE title = 'database sprint' `;
 
 /*
 ----------------------------------------------------------------------------------------------
