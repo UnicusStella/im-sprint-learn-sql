@@ -69,7 +69,8 @@ const PART4_9 = `UPDATE content
     TODO: Q 4-10. content의 데이터를 추가하기 위한 SQL을 작성해주세요.
         - duhyunkim이 작성한 컨텐츠를 추가해주세요. 제목과 본문은 자유입니다. (참고: duhyunkim의 아이디는 1입니다.)
 */
-const PART4_10 = `FILL IN THIS`;
+const PART4_10 = `INSERT INTO content
+                VALUES (default, 'stella', 'star', CURRENT_TIMESTAMP, 1)`;
 
 module.exports = {
   PART4_1,
