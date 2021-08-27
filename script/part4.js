@@ -15,7 +15,7 @@ const PART4_2 = `SELECT name FROM user`;
     TODO: Q 4-3. user 테이블에 데이터를 추가하기 위한 SQL을 작성해주세요.
         - 원하는 name, email을 사용하시면 됩니다.
 */
-const PART4_3 = `FILL IN THIS`;
+const PART4_3 = `INSERT INTO user VALUES(default, 'stella', 'stella@naver.com')`;
 
 /*
 ----------------------------------------------------------------------------------------------
