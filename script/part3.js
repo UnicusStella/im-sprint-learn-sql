@@ -14,6 +14,6 @@ const PART3_2 = `DESC user`;
     TODO: Q 3-3. content 테이블의 구조를 보기위한 SQL을 작성해주세요.
         - 요구사항에 맞는 content 테이블을 작성해야만, 테스트를 통과합니다.
 */
-const PART3_3 = `FILL IN THIS`;
+const PART3_3 = `DESC content`;
 
 module.exports = { PART3_1, PART3_2, PART3_3 };
