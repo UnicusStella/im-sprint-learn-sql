@@ -22,7 +22,7 @@ const PART4_3 = `INSERT INTO user VALUES(default, 'stella', 'stella@naver.com')`
     TODO: Q 4-4. user 테이블에서 특정 조건을 가진 데이터를 찾기위한 SQL을 작성해주세요.
         - 조건 : name이 duhyunkim이여야 합니다.
 */
-const PART4_4 = `FILL IN THIS`;
+const PART4_4 = `SELECT name FROM user WHERE name = 'duhyunkim'`;
 
 /*
 ----------------------------------------------------------------------------------------------
