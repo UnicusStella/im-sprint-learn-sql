@@ -42,7 +42,9 @@ const PART4_6 = `SELECT title FROM content`;
     TODO: Q 4-7. content의 title과 그 컨텐츠를 작성한 user의 name을 찾기 위한 SQL을 작성해주세요.
         - 저자가 없더라도, 켄턴츠의 title을 모두 찾아야합니다.
 */
-const PART4_7 = `FILL IN THIS`;
+const PART4_7 = `SELECT content.title, user.name 
+                FROM content 
+                LEFT JOIN user ON user.id = content.userId`;
 
 /*
 ----------------------------------------------------------------------------------------------
