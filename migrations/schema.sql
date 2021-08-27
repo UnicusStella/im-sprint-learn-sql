@@ -13,9 +13,9 @@ CREATE TABLE `user` (
 );
 
 CREATE TABLE `content` (
-  -- TODO: `id`
-  -- TODO: `title`
-  -- TODO: `body`
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `title` varchar(255) not NULL,
+  `body` varchar(255) not NULL,
   `created_at` timestamp not NULL DEFAULT CURRENT_TIMESTAMP,
   `userId` int,
   FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
