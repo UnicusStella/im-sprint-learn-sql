@@ -41,7 +41,9 @@ const PART5_2_1 = `SELECT id, name
     TODO: Q 5-2-2. user의 name과 email 그리고 그 user가 속한 role name(컬럼명: roleName)을 찾기 위한 SQL을 작성해주세요.
         - 속한 role이 없더라도, user의 name과 email,role name을 모두 찾아야합니다.
 */
-const PART5_2_2 = `FILL IN THIS`;
+const PART5_2_2 = `SELECT u.name, u.email, role.name as roleName
+                    FROM user as u
+                    LEFT JOIN role ON u.roleId = role.id`;
 
 /*
 ----------------------------------------------------------------------------------------------
