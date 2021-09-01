@@ -90,7 +90,11 @@ const PART5_2_6 = `SELECT cate.name
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-7. category의 name이 soccer인 content의 title, body, created_at을 찾기위한 SQL을 작성해주세요.
 */
-const PART5_2_7 = `FILL IN THIS`;
+const PART5_2_7 = `SELECT c.title, c.body, c.created_at
+                    FROM content as c
+                    LEFT JOIN content_category as c_c ON c.id = c_c.contentId
+                    LEFT JOIN category as cate ON c_c.categoryId = cate.id
+                    WHERE name = 'soccer'`;
 
 /*
 ----------------------------------------------------------------------------------------------
