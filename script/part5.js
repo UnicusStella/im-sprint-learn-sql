@@ -79,7 +79,12 @@ const PART5_2_5 = `SELECT title
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-6. JiSungPark이 작성한 content의 category name을 찾기위한 SQL을 작성해주세요.
 */
-const PART5_2_6 = `FILL IN THIS`;
+const PART5_2_6 = `SELECT cate.name
+                    FROM user as u
+                    LEFT JOIN content as c ON u.id = c.userId
+                    LEFT JOIN content_category as c_c ON c.id = c_c.contentId
+                    LEFT JOIN category as cate ON c_c.categoryId = cate.id
+                    WHERE u.name = 'jiSungPark' `;
 
 /*
 ----------------------------------------------------------------------------------------------
