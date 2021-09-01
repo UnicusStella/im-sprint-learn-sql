@@ -111,7 +111,10 @@ const PART5_2_8 = `SELECT c.title, c.body, c.created_at, u.name
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-9. duRiCha가 작성한 글의 개수 (컬럼명: ContentCount)를 출력하기 위한 SQL을 작성해주세요.
 */
-const PART5_2_9 = `FILL IN THIS`;
+const PART5_2_9 = `SELECT COUNT(*) as ContentCount
+                    FROM user as u
+                    LEFT JOIN content as c ON u.id = c.userId
+                    WHERE u.name = 'duRiCha'`;
 
 /*
 ----------------------------------------------------------------------------------------------
