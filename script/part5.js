@@ -12,7 +12,7 @@ const PART5_1_1 = `DESC category`;
     TODO: Q 5-1-2. content_category 테이블의 구조를 보기위한 SQL을 작성해주세요.
         - 요구사항에 맞는 content_category 테이블을 작성해야만, 테스트를 통과합니다.
 */
-const PART5_1_2 = `FILL IN THIS`;
+const PART5_1_2 = `DESC content_category`;
 
 /*
 ----------------------------------------------------------------------------------------------
