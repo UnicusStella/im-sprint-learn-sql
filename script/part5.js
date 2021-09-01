@@ -120,7 +120,10 @@ const PART5_2_9 = `SELECT COUNT(*) as ContentCount
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-10. 각 user(컬럼명: name)가 작성한 글의 개수 (컬럼명: ContentCount)를 출력하기 위한 SQL을 작성해주세요.
 */
-const PART5_2_10 = `FILL IN THIS`;
+const PART5_2_10 = `SELECT name.name, COUNT(c.title) as ContentCount
+                    FROM user as name
+                    LEFT JOIN content as c ON name.id = c.userId
+                    GROUP BY name.name`;
 
 module.exports = {
   PART5_1_1,
