@@ -70,7 +70,10 @@ const PART5_2_4 = `SELECT *
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-5. jiSungPark이 작성한 content의 title을 찾기위한 SQL을 작성해주세요.
 */
-const PART5_2_5 = `FILL IN THIS`;
+const PART5_2_5 = `SELECT title
+                    FROM content as c
+                    LEFT JOIN user as u ON c.userId = u.id
+                    WHERE u.name = 'jiSungPark'`;
 
 /*
 ----------------------------------------------------------------------------------------------
