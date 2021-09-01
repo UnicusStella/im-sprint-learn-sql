@@ -33,7 +33,8 @@ const PART5_1_4 = `DESC user`;
     TODO: Q 5-2-1. category 테이블에 존재하는 데이터에서 id, name을 찾는 SQL을 작성해주세요.
 */
 
-const PART5_2_1 = `FILL IN THIS`;
+const PART5_2_1 = `SELECT id, name
+                    FROM category`;
 
 /*
 ----------------------------------------------------------------------------------------------
