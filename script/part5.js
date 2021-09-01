@@ -77,31 +77,51 @@ const PART5_2_5 = `SELECT title
 */
 const PART5_2_6 = `SELECT category.name
                     FROM content
-                    LEFT JOIN user ON u`;
+                    LEFT JOIN user ON content.userId = user.id
+                    LEFT JOIN content_category ON content.id = content_category.contentId
+                    LEFT JOIN category ON content_category.categoryId = category.id
+                    WHERE user.name = 'jiSungPark'
+                    `;
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-7. category의 name이 soccer인 content의 title, body, created_at을 찾기위한 SQL을 작성해주세요.
 */
-const PART5_2_7 = `FILL IN THIS`;
+const PART5_2_7 = `SELECT content.title, content.body, content.created_at
+                    FROM category
+                    LEFT JOIN content_category ON content_category.categoryId = category.id
+                    LEFT JOIN content ON content.id = content_category.contentId
+                    WHERE category.name = 'soccer'`;
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-8. category의 name이 soccer인 content의 title, body, created_at, user의 name을 찾기위한 SQL을 작성해주세요.
 */
-const PART5_2_8 = `FILL IN THIS`;
+const PART5_2_8 = `SELECT content.title, content.body, content.created_at, user.name
+                    FROM category
+                    LEFT JOIN content_category ON content_category.categoryId = category.id
+                    LEFT JOIN content ON content.id = content_category.contentId
+                    LEFT JOIN user ON user.id = content.userId
+                    WHERE category.name = 'soccer'`;
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-9. duRiCha가 작성한 글의 개수 (컬럼명: ContentCount)를 출력하기 위한 SQL을 작성해주세요.
 */
-const PART5_2_9 = `FILL IN THIS`;
+const PART5_2_9 = `SELECT COUNT(*) as ContentCount
+                    FROM content
+                    LEFT JOIN user ON content.userId = user.id
+                    WHERE user.name = 'duRiCha'`;
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-10. 각 user(컬럼명: name)가 작성한 글의 개수 (컬럼명: ContentCount)를 출력하기 위한 SQL을 작성해주세요.
 */
-const PART5_2_10 = `FILL IN THIS`;
+const PART5_2_10 = `SELECT user.name as name, COUNT(content.title) as ContentCount
+                    FROM content
+                    RIGHT JOIN user ON content.userId = user.id
+                    GROUP BY user.name
+                    `;
 
 module.exports = {
   PART5_1_1,
