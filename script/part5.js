@@ -79,92 +79,51 @@ const PART5_2_5 = `SELECT title
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-6. JiSungPark이 작성한 content의 category name을 찾기위한 SQL을 작성해주세요.
 */
-<<<<<<< HEAD
 const PART5_2_6 = `SELECT cate.name
                     FROM user as u
                     LEFT JOIN content as c ON u.id = c.userId
                     LEFT JOIN content_category as c_c ON c.id = c_c.contentId
                     LEFT JOIN category as cate ON c_c.categoryId = cate.id
                     WHERE u.name = 'jiSungPark' `;
-=======
-const PART5_2_6 = `SELECT category.name
-                    FROM content
-                    LEFT JOIN user ON content.userId = user.id
-                    LEFT JOIN content_category ON content.id = content_category.contentId
-                    LEFT JOIN category ON content_category.categoryId = category.id
-                    WHERE user.name = 'jiSungPark'
-                    `;
->>>>>>> a27a519ae2f360ce09608ebce0bba7243b763e45
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-7. category의 name이 soccer인 content의 title, body, created_at을 찾기위한 SQL을 작성해주세요.
 */
-<<<<<<< HEAD
 const PART5_2_7 = `SELECT c.title, c.body, c.created_at
                     FROM content as c
                     LEFT JOIN content_category as c_c ON c.id = c_c.contentId
                     LEFT JOIN category as cate ON c_c.categoryId = cate.id
                     WHERE name = 'soccer'`;
-=======
-const PART5_2_7 = `SELECT content.title, content.body, content.created_at
-                    FROM category
-                    LEFT JOIN content_category ON content_category.categoryId = category.id
-                    LEFT JOIN content ON content.id = content_category.contentId
-                    WHERE category.name = 'soccer'`;
->>>>>>> a27a519ae2f360ce09608ebce0bba7243b763e45
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-8. category의 name이 soccer인 content의 title, body, created_at, user의 name을 찾기위한 SQL을 작성해주세요.
 */
-<<<<<<< HEAD
 const PART5_2_8 = `SELECT c.title, c.body, c.created_at, u.name
                     FROM user as u 
                     LEFT JOIN content as c ON u.id = c.userId
                     LEFT JOIN content_category as c_c ON c.id = c_c.contentId
                     LEFT JOIN category as cate ON c_c.categoryId = cate.id
                     WHERE cate.name = 'soccer'`;
-=======
-const PART5_2_8 = `SELECT content.title, content.body, content.created_at, user.name
-                    FROM category
-                    LEFT JOIN content_category ON content_category.categoryId = category.id
-                    LEFT JOIN content ON content.id = content_category.contentId
-                    LEFT JOIN user ON user.id = content.userId
-                    WHERE category.name = 'soccer'`;
->>>>>>> a27a519ae2f360ce09608ebce0bba7243b763e45
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-9. duRiCha가 작성한 글의 개수 (컬럼명: ContentCount)를 출력하기 위한 SQL을 작성해주세요.
 */
 const PART5_2_9 = `SELECT COUNT(*) as ContentCount
-<<<<<<< HEAD
                     FROM user as u
                     LEFT JOIN content as c ON u.id = c.userId
                     WHERE u.name = 'duRiCha'`;
-=======
-                    FROM content
-                    LEFT JOIN user ON content.userId = user.id
-                    WHERE user.name = 'duRiCha'`;
->>>>>>> a27a519ae2f360ce09608ebce0bba7243b763e45
 
 /*
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-10. 각 user(컬럼명: name)가 작성한 글의 개수 (컬럼명: ContentCount)를 출력하기 위한 SQL을 작성해주세요.
 */
-<<<<<<< HEAD
 const PART5_2_10 = `SELECT name.name, COUNT(c.title) as ContentCount
                     FROM user as name
                     LEFT JOIN content as c ON name.id = c.userId
                     GROUP BY name.name`;
-=======
-const PART5_2_10 = `SELECT user.name as name, COUNT(content.title) as ContentCount
-                    FROM content
-                    RIGHT JOIN user ON content.userId = user.id
-                    GROUP BY user.name
-                    `;
->>>>>>> a27a519ae2f360ce09608ebce0bba7243b763e45
 
 module.exports = {
   PART5_1_1,
