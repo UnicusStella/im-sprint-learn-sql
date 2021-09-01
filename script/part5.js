@@ -49,7 +49,9 @@ const PART5_2_2 = `SELECT u.name, u.email, role.name as roleName
 ----------------------------------------------------------------------------------------------
     TODO: Q 5-2-3. 어느 role에도 속하지 않는 user의 모든 컬럼 데이터를 찾기위한 SQL을 작성해주세요.
 */
-const PART5_2_3 = `FILL IN THIS`;
+const PART5_2_3 = `SELECT *
+                    FROM user as u
+                    WHERE roleId IS NULL`;
 
 /*
 ----------------------------------------------------------------------------------------------
